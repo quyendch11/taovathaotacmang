@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> sample screen</h1>
+<input type="text" id="nhapso"/>
+<input id="them" type="button" onclick="themmang()" value="add"/>
+<input type="button" id="hienthi" onclick="hienthimang()" value="display"/>
+<p id="ketqua"></p>
+<script>
+    let x =0;
+    let luugiatri = [];
+function themmang(){
+luugiatri[x] = document.getElementById("nhapso").value;
+alert("giá trị: " + luugiatri[x] + " được thêm vào vị trí " + x);
+x++;
+document.getElementById("nhapso").value="";
+}
+function hienthimang(){
+    let a = "<hr>";
+for (let i=0 ;i < luugiatri.length;i++){
+    a += "giá trị " + i + " = " + luugiatri[i] + "<br>";
+}
+document.getElementById("ketqua").innerHTML = a;
+}
+</script>
+</body>
+</html>
